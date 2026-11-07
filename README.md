@@ -19,10 +19,13 @@ Mencari dan merekomendasikan gambar yang paling mirip secara visual dari basis d
 
 ## Dataset (Tahap 1)
 
-- Jumlah citra: [isi, minimal 200]
-- Foto sendiri: [isi, minimal 60, 15 per anggota]
-- Sumber data tambahan dan lisensinya: [isi, atau tulis "tidak ada"]
-- Langkah preprocessing: [isi, ringkas dan berurutan]
+- Jumlah citra: 200
+- Foto sendiri: 60
+- Sumber data tambahan dan lisensinya: Openverse dan Pixabay (mengikuti lisensi dan ketentuan penggunaan masing-masing gambar).
+- Langkah preprocessing:
+  1. Resize maksimal 768 piksel dengan mempertahankan rasio aspek.
+  2. Contrast stretching menggunakan normalisasi min-max pada kanal kecerahan (V) dalam ruang warna HSV.
+  3. Pemeriksaan duplikat menggunakan algoritma SHA-256.
 
 Rincian dataset, format anotasi, dan tautan Drive: [data/README.md](data/README.md). Contoh sebelum–sesudah ada di [outputs/figures/](outputs/figures/).
 
